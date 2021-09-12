@@ -1,0 +1,44 @@
+program
+    int Y, N;
+    int AGAIN;
+    int OP1, OP2, RESULT;
+    int MULT, ADD, SUB;
+    int MODE;
+begin
+    Y = 1;
+    N = 0;
+    AGAIN = Y;
+    MULT = 0;
+    ADD = 1;
+    SUB = 2;
+    OP1 = 0;
+    OP2 = 0;
+ while (AGAIN == Y) loop
+  write OP1;
+  read OP1; 
+  write MULT, ADD, SUB;
+  read MODE;
+  write OP2;
+  read OP2;
+  if (MODE == ADD) then
+   RESULT = OP1 + OP2;
+  else if (MODE == SUB) then
+    RESULT = OP1 - OP2;
+   else 
+    RESULT = OP1 * OP2;
+   end;
+  end;
+  write OP1;
+  if (MODE == ADD) then
+   write ADD;
+  else if (MODE == SUB) then
+    write SUB;
+   else 
+    write MULT;
+   end;
+  end;
+  write OP2, RESULT;
+  write AGAIN, Y, N;
+  read AGAIN;
+ end;
+end
